@@ -1,0 +1,62 @@
+[
+  {
+    "id": "USER-001",
+    "name": "Ayush Choudhary",
+    "email": "ayush@geoland.gov.in",
+    "password": "password123",
+    "role": "ADMIN",
+    "mobile": "+91 98765 43210",
+    "organization": "Ministry of Housing & Land Governance",
+    "district": "Bengaluru Urban",
+    "state": "Karnataka",
+    "createdAt": "2026-01-15T10:30:00.000Z"
+  },
+  {
+    "id": "USER-002",
+    "name": "Dr. Rajesh Sharma",
+    "email": "rajesh.official@karnataka.gov.in",
+    "password": "password123",
+    "role": "OFFICIAL",
+    "mobile": "+91 98123 45678",
+    "organization": "Revenue & Land Records Department",
+    "district": "Bengaluru South",
+    "state": "Karnataka",
+    "createdAt": "2026-02-01T11:20:00.000Z"
+  },
+  {
+    "id": "USER-003",
+    "name": "Sunita Patil",
+    "email": "sunita.patil@gmail.com",
+    "password": "password123",
+    "role": "CITIZEN",
+    "mobile": "+91 97456 12389",
+    "organization": "Independent Property Owner",
+    "district": "Bengaluru Urban",
+    "state": "Karnataka",
+    "createdAt": "2026-02-10T14:45:00.000Z"
+  },
+  {
+    "id": "USER-2470449",
+    "name": "Quantam Developer",
+    "email": "dev@quantam.com",
+    "password": "password123",
+    "role": "OFFICIAL",
+    "mobile": "",
+    "organization": "Registered User",
+    "district": "Bengaluru Urban",
+    "state": "Karnataka",
+    "createdAt": "2026-09-04T17:21:10.449Z"
+  },
+  {
+    "id": "USER-2628166",
+    "name": "ayush",
+    "email": "choudharyayush00121@gmail.com",
+    "password": "Ayush@123",
+    "role": "CITIZEN",
+    "mobile": "+919816096792",
+    "organization": "Registered User",
+    "district": "Bengaluru Urban",
+    "state": "Karnataka",
+    "createdAt": "2026-09-04T17:23:48.166Z"
+  }
+]

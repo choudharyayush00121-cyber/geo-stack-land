@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Leaflet Map Dark Styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #0f172a !important;
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-tip {
+  background: #1e293b !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* 3D Perspective & Spatial Transform System */
+.perspective-600 {
+  perspective: 600px;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-2000 {
+  perspective: 2000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Depth Layer Utilities */
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+.translate-z-4 {
+  transform: translateZ(16px);
+}
+.translate-z-8 {
+  transform: translateZ(28px);
+}
+.translate-z-12 {
+  transform: translateZ(42px);
+}
+.translate-z-16 {
+  transform: translateZ(58px);
+}
+.translate-z-24 {
+  transform: translateZ(80px);
+}
+
+/* Cyber Grid and Spatial Backgrounds */
+.bg-cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.bg-cyber-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(6, 182, 212, 0.18) 1.2px, transparent 1.2px);
+}
+
+/* Futuristic Glow Presets */
+.glow-cyan-sm {
+  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.35);
+}
+.glow-cyan-lg {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.45);
+}
+.glow-emerald-sm {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.35);
+}
+.glow-purple-sm {
+  box-shadow: 0 0 15px -3px rgba(168, 85, 247, 0.35);
+}
+
+/* Holographic Shimmer Sweep */
+.holographic-shine {
+  position: relative;
+  overflow: hidden;
+}
+.holographic-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.holographic-shine:hover::after {
+  transform: translateX(100%);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-radar-sweep {
+  animation: radarSweep 5s linear infinite;
+}
+
+@keyframes pulseGlowRing {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+.animate-pulse-glow-ring {
+  animation: pulseGlowRing 3s ease-in-out infinite;
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+.animate-laser-scan {
+  animation: laserScan 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+

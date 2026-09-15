@@ -1,0 +1,362 @@
+[
+  {
+    "id": "PARCEL-001",
+    "ulpin": "14829304812901",
+    "surveyNo": "Sy. No. 42/1A",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [
+        77.17215,
+        31.10605
+      ],
+      [
+        77.17465,
+        31.10605
+      ],
+      [
+        77.17465,
+        31.10355
+      ],
+      [
+        77.17215,
+        31.10355
+      ],
+      [
+        77.17215,
+        31.10605
+      ]
+    ],
+    "center": [
+      31.104799999999997,
+      77.1734
+    ],
+    "areaSqFt": 28500,
+    "areaAcres": 0.654,
+    "zoning": "Commercial",
+    "zoningCode": "C-2",
+    "circleRatePerSqFt": 6500,
+    "marketValue": 185250000,
+    "propertyTaxAnnual": 185250,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Rajesh Kumar Sharma",
+      "aadhaarMasked": "XXXX-XXXX-8921",
+      "possessionDate": "2018-04-12",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "HP-SHM-REG-2018-99421"
+    },
+    "financial": {
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "State Bank of India (Commercial Branch)",
+      "loanAmount": 45000000,
+      "lienId": "LIEN-SBI-2021-883",
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": true,
+      "severity": "HIGH",
+      "detectedViolation": "Unauthorized Commercial Structure Boundary Overlap (120 sq ft)",
+      "riskScore": 87,
+      "historicalBuildingAreaPct": 32,
+      "currentBuildingAreaPct": 48,
+      "lastSatelliteScan": "2026-08-20",
+      "aiBoundingBox": {
+        "minLat": 12.9805,
+        "maxLat": 12.9814,
+        "minLng": 77.5868,
+        "maxLng": 77.5879
+      }
+    }
+  },
+  {
+    "id": "PARCEL-002",
+    "ulpin": "14829304812902",
+    "surveyNo": "Sy. No. 42/1B",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [
+        77.17515,
+        31.10605
+      ],
+      [
+        77.17765,
+        31.10605
+      ],
+      [
+        77.17765,
+        31.10355
+      ],
+      [
+        77.17515,
+        31.10355
+      ],
+      [
+        77.17515,
+        31.10605
+      ]
+    ],
+    "center": [
+      31.104799999999997,
+      77.1764
+    ],
+    "areaSqFt": 31200,
+    "areaAcres": 0.716,
+    "zoning": "Residential",
+    "zoningCode": "R-3",
+    "circleRatePerSqFt": 4800,
+    "marketValue": 149760000,
+    "propertyTaxAnnual": 119808,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Sunita Venkatesh",
+      "aadhaarMasked": "XXXX-XXXX-4310",
+      "possessionDate": "2020-11-05",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "HP-SHM-REG-2020-10492"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Boundary Verified via Cadastral Overlay",
+      "riskScore": 4,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 0,
+      "lastSatelliteScan": "2026-08-28",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-003",
+    "ulpin": "14829304812903",
+    "surveyNo": "Sy. No. 43/2",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [
+        77.17215,
+        31.10305
+      ],
+      [
+        77.17465,
+        31.10305
+      ],
+      [
+        77.17465,
+        31.10055
+      ],
+      [
+        77.17215,
+        31.10055
+      ],
+      [
+        77.17215,
+        31.10305
+      ]
+    ],
+    "center": [
+      31.101799999999997,
+      77.1734
+    ],
+    "areaSqFt": 43560,
+    "areaAcres": 1,
+    "zoning": "Agricultural",
+    "zoningCode": "AG-1",
+    "circleRatePerSqFt": 2200,
+    "marketValue": 95832000,
+    "propertyTaxAnnual": 38332,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Anand Mohan & Sons (HUF)",
+      "aadhaarMasked": "XXXX-XXXX-1190",
+      "possessionDate": "2012-01-20",
+      "mutationStatus": "DISPUTE_PENDING",
+      "titleType": "Presumptive Ownership (Under Review)",
+      "deedNo": "HP-SHM-REG-2012-33019"
+    },
+    "financial": {
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "HDFC Bank (Agri Loan)",
+      "loanAmount": 12000000,
+      "lienId": "LIEN-HDFC-2023-401",
+      "courtDispute": true,
+      "taxPendingDues": 45000
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": true,
+      "severity": "CRITICAL",
+      "detectedViolation": "Illegal Temporary Warehouse Shed on Agricultural Reserve Land",
+      "riskScore": 94,
+      "historicalBuildingAreaPct": 5,
+      "currentBuildingAreaPct": 28,
+      "lastSatelliteScan": "2026-09-01",
+      "aiBoundingBox": {
+        "minLat": 12.9763,
+        "maxLat": 12.9778,
+        "minLng": 77.5858,
+        "maxLng": 77.5872
+      }
+    }
+  },
+  {
+    "id": "PARCEL-004",
+    "ulpin": "14829304812904",
+    "surveyNo": "Sy. No. 43/3",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [
+        77.17515,
+        31.10305
+      ],
+      [
+        77.17765,
+        31.10305
+      ],
+      [
+        77.17765,
+        31.10055
+      ],
+      [
+        77.17515,
+        31.10055
+      ],
+      [
+        77.17515,
+        31.10305
+      ]
+    ],
+    "center": [
+      31.101799999999997,
+      77.1764
+    ],
+    "areaSqFt": 24000,
+    "areaAcres": 0.551,
+    "zoning": "Industrial",
+    "zoningCode": "IND-1",
+    "circleRatePerSqFt": 5400,
+    "marketValue": 129600000,
+    "propertyTaxAnnual": 155520,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Apex Infra Logistics Solutions Pvt Ltd",
+      "aadhaarMasked": "CIN-U70100KA2019PTC12",
+      "possessionDate": "2021-07-15",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Corporate Title",
+      "deedNo": "HP-SHM-REG-2021-77291"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None",
+      "riskScore": 2,
+      "historicalBuildingAreaPct": 65,
+      "currentBuildingAreaPct": 65,
+      "lastSatelliteScan": "2026-08-30",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-005",
+    "ulpin": "14829304812905",
+    "surveyNo": "Sy. No. 44/1",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [
+        77.17815,
+        31.10605
+      ],
+      [
+        77.18065,
+        31.10605
+      ],
+      [
+        77.18065,
+        31.10355
+      ],
+      [
+        77.17815,
+        31.10355
+      ],
+      [
+        77.17815,
+        31.10605
+      ]
+    ],
+    "center": [
+      31.104799999999997,
+      77.1794
+    ],
+    "areaSqFt": 50000,
+    "areaAcres": 1.147,
+    "zoning": "Eco-Sensitive / Buffer",
+    "zoningCode": "ECO-Z",
+    "circleRatePerSqFt": 1500,
+    "marketValue": 75000000,
+    "propertyTaxAnnual": 30000,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Karnataka Forest & Revenue Dept (Public Land)",
+      "aadhaarMasked": "GOVT-PUBLIC-ASSET",
+      "possessionDate": "1972-01-01",
+      "mutationStatus": "PUBLIC_GOVT_LAND",
+      "titleType": "State Protected Public Infrastructure Land",
+      "deedNo": "GOVT-NOTIF-1972-001"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": true,
+      "bankLien": "Government Public Asset Lock (Non-Transferable)",
+      "loanAmount": 0,
+      "lienId": "GOVT-LOCK-001",
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": true,
+      "severity": "HIGH",
+      "detectedViolation": "Unauthorized Construction & Debris Encroachment inside Buffer Zone",
+      "riskScore": 81,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 14,
+      "lastSatelliteScan": "2026-09-02",
+      "aiBoundingBox": {
+        "minLat": 12.9792,
+        "maxLat": 12.9802,
+        "minLng": 77.592,
+        "maxLng": 77.5935
+      }
+    }
+  }
+]
