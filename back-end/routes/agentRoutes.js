@@ -280,14 +280,22 @@ router.post('/vector/search', async (req, res) => {
     return res.json(pyRes.data);
   } catch (err) {
     // Return high quality hybrid search from knowledge base
-    const qTokens = (query || '').toLowerCase().split(' ');
-    const results = fallbackKnowledgeBase.map(item => {
-      const match = qTokens.some(t => t.length > 2 && item.content.toLowerCase().includes(t));
-      return {
-        ...item,
-        hybridScore: match ? item.hybridScore : item.hybridScore * 0.9
-      };
-    });
+    const qTokens = (query || '').toLowerCase().split(/\s+/).filter(Boolean);
+    const requestedTopK = Number(topK);
+    const limit = Number.isInteger(requestedTopK) && requestedTopK > 0
+      ? Math.min(requestedTopK, fallbackKnowledgeBase.length)
+      : 4;
+    const results = fallbackKnowledgeBase
+      .filter((item) => !category || item.category === category)
+      .map((item) => {
+        const match = qTokens.some((token) => token.length > 2 && item.content.toLowerCase().includes(token));
+        return {
+          ...item,
+          hybridScore: match ? item.hybridScore : item.hybridScore * 0.9
+        };
+      })
+      .sort((a, b) => b.hybridScore - a.hybridScore)
+      .slice(0, limit);
     return res.json({
       success: true,
       query,

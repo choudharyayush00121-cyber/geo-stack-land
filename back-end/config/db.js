@@ -4,7 +4,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const connectDB = async () => {
-  const mongoUri = process.env.MONGO_URI || 'mongodb+srv://choudharyayush00121_db_user:1HPQyRsnYUyEtZ02@cluster001.4xvndjm.mongodb.net/taskApp?retryWrites=true&w=majority';
+  const mongoUri = process.env.MONGO_URI;
+
+  if (!mongoUri) {
+    console.warn('MONGO_URI is not configured; using the local JSON data fallback.');
+    return { connected: false, error: 'MONGO_URI is not configured' };
+  }
 
   try {
     const conn = await mongoose.connect(mongoUri, {

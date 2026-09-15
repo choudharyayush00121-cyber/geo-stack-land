@@ -22,18 +22,21 @@ app.use('/api/agents', agentRoutes);
 
 // Root health check endpoint
 app.get('/', async (req, res) => {
-  let dbStatus = 'DISCONNECTED';
-  try {
-    await prisma.$queryRaw`SELECT 1`;
-    dbStatus = 'CONNECTED_POSTGRES';
-  } catch (err) {
-    console.error('DB Error:', err);
+  let dbStatus = 'JSON_FILE_FALLBACK';
+  if (process.env.DATABASE_URL) {
+    try {
+      await prisma.$queryRaw`SELECT 1`;
+      dbStatus = 'CONNECTED_POSTGRES';
+    } catch (err) {
+      console.error('PostgreSQL health check failed:', err.message);
+      dbStatus = 'POSTGRES_UNAVAILABLE';
+    }
   }
 
   res.json({
     name: 'GeoLand Stack - Digital Public Infrastructure (DPI) API Gateway',
     version: '2.0.0',
-    status: 'HEALTHY',
+    status: dbStatus === 'POSTGRES_UNAVAILABLE' ? 'DEGRADED' : 'HEALTHY',
     database: dbStatus,
     sihProblemStatement: '26014 - An Integrated GIS-based Digital Public Infrastructure for Land Governance',
     timestamp: new Date().toISOString()
@@ -60,4 +63,3 @@ const startServer = (portToTry) => {
 };
 
 startServer(Number(PORT));
-

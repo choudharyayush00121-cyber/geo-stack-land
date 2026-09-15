@@ -2,36 +2,19 @@
   {
     "id": "PARCEL-001",
     "ulpin": "14829304812901",
+    "region": "Shimla Hills (HP)",
     "surveyNo": "Sy. No. 42/1A",
     "district": "Shimla",
     "taluk": "Theog",
     "village": "Fagu",
     "coordinates": [
-      [
-        77.17215,
-        31.10605
-      ],
-      [
-        77.17465,
-        31.10605
-      ],
-      [
-        77.17465,
-        31.10355
-      ],
-      [
-        77.17215,
-        31.10355
-      ],
-      [
-        77.17215,
-        31.10605
-      ]
+      [77.17215, 31.10605],
+      [77.17465, 31.10605],
+      [77.17465, 31.10355],
+      [77.17215, 31.10355],
+      [77.17215, 31.10605]
     ],
-    "center": [
-      31.104799999999997,
-      77.1734
-    ],
+    "center": [31.10480, 77.17340],
     "areaSqFt": 28500,
     "areaAcres": 0.654,
     "zoning": "Commercial",
@@ -66,46 +49,29 @@
       "currentBuildingAreaPct": 48,
       "lastSatelliteScan": "2026-08-20",
       "aiBoundingBox": {
-        "minLat": 12.9805,
-        "maxLat": 12.9814,
-        "minLng": 77.5868,
-        "maxLng": 77.5879
+        "minLat": 31.1042,
+        "maxLat": 31.1055,
+        "minLng": 77.1728,
+        "maxLng": 77.1742
       }
     }
   },
   {
     "id": "PARCEL-002",
     "ulpin": "14829304812902",
+    "region": "Shimla Hills (HP)",
     "surveyNo": "Sy. No. 42/1B",
     "district": "Shimla",
     "taluk": "Theog",
     "village": "Fagu",
     "coordinates": [
-      [
-        77.17515,
-        31.10605
-      ],
-      [
-        77.17765,
-        31.10605
-      ],
-      [
-        77.17765,
-        31.10355
-      ],
-      [
-        77.17515,
-        31.10355
-      ],
-      [
-        77.17515,
-        31.10605
-      ]
+      [77.17515, 31.10605],
+      [77.17765, 31.10605],
+      [77.17765, 31.10355],
+      [77.17515, 31.10355],
+      [77.17515, 31.10605]
     ],
-    "center": [
-      31.104799999999997,
-      77.1764
-    ],
+    "center": [31.10480, 77.17640],
     "areaSqFt": 31200,
     "areaAcres": 0.716,
     "zoning": "Residential",
@@ -123,11 +89,11 @@
       "deedNo": "HP-SHM-REG-2020-10492"
     },
     "financial": {
-      "isEncumbered": false,
-      "lienLockActive": false,
-      "bankLien": "None",
-      "loanAmount": 0,
-      "lienId": null,
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "Maharashtra State Co-operative Bank (Housing Loan)",
+      "loanAmount": 120000000,
+      "lienId": "LIEN-MSCB-2024-881",
       "courtDispute": false,
       "taxPendingDues": 0
     },
@@ -138,132 +104,41 @@
       "riskScore": 4,
       "historicalBuildingAreaPct": 0,
       "currentBuildingAreaPct": 0,
-      "lastSatelliteScan": "2026-08-28",
+      "lastSatelliteScan": "2026-08-20",
       "aiBoundingBox": null
     }
   },
   {
     "id": "PARCEL-003",
     "ulpin": "14829304812903",
-    "surveyNo": "Sy. No. 43/2",
+    "region": "Shimla Hills (HP)",
+    "surveyNo": "Sy. No. 42/2A",
     "district": "Shimla",
     "taluk": "Theog",
     "village": "Fagu",
     "coordinates": [
-      [
-        77.17215,
-        31.10305
-      ],
-      [
-        77.17465,
-        31.10305
-      ],
-      [
-        77.17465,
-        31.10055
-      ],
-      [
-        77.17215,
-        31.10055
-      ],
-      [
-        77.17215,
-        31.10305
-      ]
+      [77.17215, 31.10305],
+      [77.17465, 31.10305],
+      [77.17465, 31.10055],
+      [77.17215, 31.10055],
+      [77.17215, 31.10305]
     ],
-    "center": [
-      31.101799999999997,
-      77.1734
-    ],
-    "areaSqFt": 43560,
-    "areaAcres": 1,
+    "center": [31.10180, 77.17340],
+    "areaSqFt": 42000,
+    "areaAcres": 0.964,
     "zoning": "Agricultural",
     "zoningCode": "AG-1",
     "circleRatePerSqFt": 2200,
-    "marketValue": 95832000,
-    "propertyTaxAnnual": 38332,
-    "stampDutyRatePct": 5.6,
+    "marketValue": 92400000,
+    "propertyTaxAnnual": 36960,
+    "stampDutyRatePct": 4.0,
     "owner": {
-      "name": "Anand Mohan & Sons (HUF)",
-      "aadhaarMasked": "XXXX-XXXX-1190",
+      "name": "Mahinder Pal Singh",
+      "aadhaarMasked": "XXXX-XXXX-9102",
       "possessionDate": "2012-01-20",
-      "mutationStatus": "DISPUTE_PENDING",
-      "titleType": "Presumptive Ownership (Under Review)",
-      "deedNo": "HP-SHM-REG-2012-33019"
-    },
-    "financial": {
-      "isEncumbered": true,
-      "lienLockActive": true,
-      "bankLien": "HDFC Bank (Agri Loan)",
-      "loanAmount": 12000000,
-      "lienId": "LIEN-HDFC-2023-401",
-      "courtDispute": true,
-      "taxPendingDues": 45000
-    },
-    "aiSurveillance": {
-      "encroachmentDetected": true,
-      "severity": "CRITICAL",
-      "detectedViolation": "Illegal Temporary Warehouse Shed on Agricultural Reserve Land",
-      "riskScore": 94,
-      "historicalBuildingAreaPct": 5,
-      "currentBuildingAreaPct": 28,
-      "lastSatelliteScan": "2026-09-01",
-      "aiBoundingBox": {
-        "minLat": 12.9763,
-        "maxLat": 12.9778,
-        "minLng": 77.5858,
-        "maxLng": 77.5872
-      }
-    }
-  },
-  {
-    "id": "PARCEL-004",
-    "ulpin": "14829304812904",
-    "surveyNo": "Sy. No. 43/3",
-    "district": "Shimla",
-    "taluk": "Theog",
-    "village": "Fagu",
-    "coordinates": [
-      [
-        77.17515,
-        31.10305
-      ],
-      [
-        77.17765,
-        31.10305
-      ],
-      [
-        77.17765,
-        31.10055
-      ],
-      [
-        77.17515,
-        31.10055
-      ],
-      [
-        77.17515,
-        31.10305
-      ]
-    ],
-    "center": [
-      31.101799999999997,
-      77.1764
-    ],
-    "areaSqFt": 24000,
-    "areaAcres": 0.551,
-    "zoning": "Industrial",
-    "zoningCode": "IND-1",
-    "circleRatePerSqFt": 5400,
-    "marketValue": 129600000,
-    "propertyTaxAnnual": 155520,
-    "stampDutyRatePct": 5.6,
-    "owner": {
-      "name": "Apex Infra Logistics Solutions Pvt Ltd",
-      "aadhaarMasked": "CIN-U70100KA2019PTC12",
-      "possessionDate": "2021-07-15",
       "mutationStatus": "MUTATED_CLEAR",
-      "titleType": "Conclusive Corporate Title",
-      "deedNo": "HP-SHM-REG-2021-77291"
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "HP-SHM-REG-2012-04910"
     },
     "financial": {
       "isEncumbered": false,
@@ -277,86 +152,604 @@
     "aiSurveillance": {
       "encroachmentDetected": false,
       "severity": "CLEAR",
-      "detectedViolation": "None",
-      "riskScore": 2,
-      "historicalBuildingAreaPct": 65,
-      "currentBuildingAreaPct": 65,
-      "lastSatelliteScan": "2026-08-30",
+      "detectedViolation": "None - Active Royal Delicious Apple Orchard Cultivation",
+      "riskScore": 12,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 0,
+      "lastSatelliteScan": "2026-08-20",
       "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-004",
+    "ulpin": "14829304812904",
+    "region": "Shimla Hills (HP)",
+    "surveyNo": "Sy. No. 42/2B",
+    "district": "Shimla",
+    "taluk": "Theog",
+    "village": "Fagu",
+    "coordinates": [
+      [77.17515, 31.10305],
+      [77.17765, 31.10305],
+      [77.17765, 31.10055],
+      [77.17515, 31.10055],
+      [77.17515, 31.10305]
+    ],
+    "center": [31.10180, 77.17640],
+    "areaSqFt": 36000,
+    "areaAcres": 0.826,
+    "zoning": "Eco Buffer Zone",
+    "zoningCode": "ENV-PROT",
+    "circleRatePerSqFt": 1500,
+    "marketValue": 54000000,
+    "propertyTaxAnnual": 0,
+    "stampDutyRatePct": 5.0,
+    "owner": {
+      "name": "HP State Forest Department",
+      "aadhaarMasked": "GOVT-ENTITY-01",
+      "possessionDate": "1972-03-15",
+      "mutationStatus": "GOVT_PROTECTED",
+      "titleType": "Sovereign State Protected Land",
+      "deedNo": "HP-GOV-GAZETTE-1972-004"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": true,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Eco-Sensitive Zone Boundary Verified",
+      "riskScore": 18,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 8,
+      "lastSatelliteScan": "2026-08-20",
+      "aiBoundingBox": {
+        "minLat": 31.1012,
+        "maxLat": 31.1025,
+        "minLng": 77.1755,
+        "maxLng": 77.1772
+      }
     }
   },
   {
     "id": "PARCEL-005",
     "ulpin": "14829304812905",
-    "surveyNo": "Sy. No. 44/1",
+    "region": "Shimla Hills (HP)",
+    "surveyNo": "Sy. No. 43/1",
     "district": "Shimla",
     "taluk": "Theog",
     "village": "Fagu",
     "coordinates": [
-      [
-        77.17815,
-        31.10605
-      ],
-      [
-        77.18065,
-        31.10605
-      ],
-      [
-        77.18065,
-        31.10355
-      ],
-      [
-        77.17815,
-        31.10355
-      ],
-      [
-        77.17815,
-        31.10605
-      ]
+      [77.17815, 31.10605],
+      [77.18065, 31.10605],
+      [77.18065, 31.10355],
+      [77.17815, 31.10355],
+      [77.17815, 31.10605]
     ],
-    "center": [
-      31.104799999999997,
-      77.1794
-    ],
-    "areaSqFt": 50000,
-    "areaAcres": 1.147,
-    "zoning": "Eco-Sensitive / Buffer",
-    "zoningCode": "ECO-Z",
-    "circleRatePerSqFt": 1500,
-    "marketValue": 75000000,
-    "propertyTaxAnnual": 30000,
+    "center": [31.10480, 77.17940],
+    "areaSqFt": 25000,
+    "areaAcres": 0.574,
+    "zoning": "Commercial",
+    "zoningCode": "C-1",
+    "circleRatePerSqFt": 5500,
+    "marketValue": 137500000,
+    "propertyTaxAnnual": 137500,
     "stampDutyRatePct": 5.6,
     "owner": {
-      "name": "Karnataka Forest & Revenue Dept (Public Land)",
-      "aadhaarMasked": "GOVT-PUBLIC-ASSET",
-      "possessionDate": "1972-01-01",
-      "mutationStatus": "PUBLIC_GOVT_LAND",
-      "titleType": "State Protected Public Infrastructure Land",
-      "deedNo": "GOVT-NOTIF-1972-001"
+      "name": "Kavita Devi Thakur",
+      "aadhaarMasked": "XXXX-XXXX-6623",
+      "possessionDate": "2021-08-19",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "HP-SHM-REG-2021-19824"
     },
     "financial": {
       "isEncumbered": false,
-      "lienLockActive": true,
-      "bankLien": "Government Public Asset Lock (Non-Transferable)",
+      "lienLockActive": false,
+      "bankLien": "None",
       "loanAmount": 0,
-      "lienId": "GOVT-LOCK-001",
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Boundary Verified",
+      "riskScore": 8,
+      "historicalBuildingAreaPct": 15,
+      "currentBuildingAreaPct": 15,
+      "lastSatelliteScan": "2026-08-20",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-006",
+    "ulpin": "29104892019401",
+    "region": "Bengaluru Tech Corridor (KA)",
+    "surveyNo": "Sy. No. 104/1A",
+    "district": "Bengaluru Urban",
+    "taluk": "Bengaluru East",
+    "village": "Kadubeesanahalli",
+    "coordinates": [
+      [77.68950, 12.93720],
+      [77.69300, 12.93720],
+      [77.69300, 12.93400],
+      [77.68950, 12.93400],
+      [77.68950, 12.93720]
+    ],
+    "center": [12.93560, 77.69125],
+    "areaSqFt": 87120,
+    "areaAcres": 2.000,
+    "zoning": "Commercial SEZ",
+    "zoningCode": "SEZ-IT",
+    "circleRatePerSqFt": 14500,
+    "marketValue": 1263240000,
+    "propertyTaxAnnual": 2526480,
+    "stampDutyRatePct": 6.5,
+    "owner": {
+      "name": "Global Tech Space Innovations Pvt Ltd",
+      "aadhaarMasked": "CORP-CIN-U72200KA",
+      "possessionDate": "2019-06-14",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "KA-BLR-REG-2019-88219"
+    },
+    "financial": {
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "HDFC Bank Consortium (Commercial Loan)",
+      "loanAmount": 650000000,
+      "lienId": "LIEN-HDFC-2022-9014",
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Masterplan Compliance Verified by Drone Inspection",
+      "riskScore": 6,
+      "historicalBuildingAreaPct": 45,
+      "currentBuildingAreaPct": 62,
+      "lastSatelliteScan": "2026-08-22",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-007",
+    "ulpin": "29104892019402",
+    "region": "Bengaluru Tech Corridor (KA)",
+    "surveyNo": "Sy. No. 104/1B",
+    "district": "Bengaluru Urban",
+    "taluk": "Bengaluru East",
+    "village": "Kadubeesanahalli",
+    "coordinates": [
+      [77.69350, 12.93720],
+      [77.69700, 12.93720],
+      [77.69700, 12.93400],
+      [77.69350, 12.93400],
+      [77.69350, 12.93720]
+    ],
+    "center": [12.93560, 77.69525],
+    "areaSqFt": 65340,
+    "areaAcres": 1.500,
+    "zoning": "Lake Valley Buffer Zone",
+    "zoningCode": "ENV-RAJAKALUVE",
+    "circleRatePerSqFt": 8200,
+    "marketValue": 535788000,
+    "propertyTaxAnnual": 0,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Narayana Swamy Gowda",
+      "aadhaarMasked": "XXXX-XXXX-1934",
+      "possessionDate": "2014-03-10",
+      "mutationStatus": "MUTATION_DISPUTED",
+      "titleType": "Provisional Title (High Court Stay Order)",
+      "deedNo": "KA-BLR-REG-2014-31902"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": true,
+      "taxPendingDues": 345000
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": true,
+      "severity": "CRITICAL",
+      "detectedViolation": "Unauthorized Stormwater Drain (Rajakaluve) Buffer Encroachment (28m breach)",
+      "riskScore": 96,
+      "historicalBuildingAreaPct": 8,
+      "currentBuildingAreaPct": 42,
+      "lastSatelliteScan": "2026-08-22",
+      "aiBoundingBox": {
+        "minLat": 12.9342,
+        "maxLat": 12.9360,
+        "minLng": 77.6942,
+        "maxLng": 77.6965
+      }
+    }
+  },
+  {
+    "id": "PARCEL-008",
+    "ulpin": "29104892019403",
+    "region": "Bengaluru Tech Corridor (KA)",
+    "surveyNo": "Sy. No. 105/2",
+    "district": "Bengaluru Urban",
+    "taluk": "Bengaluru East",
+    "village": "Bellandur",
+    "coordinates": [
+      [77.68950, 12.93320],
+      [77.69300, 12.93320],
+      [77.69300, 12.93000],
+      [77.68950, 12.93000],
+      [77.68950, 12.93320]
+    ],
+    "center": [12.93160, 77.69125],
+    "areaSqFt": 43560,
+    "areaAcres": 1.000,
+    "zoning": "Residential",
+    "zoningCode": "R-4",
+    "circleRatePerSqFt": 9800,
+    "marketValue": 426888000,
+    "propertyTaxAnnual": 426888,
+    "stampDutyRatePct": 5.6,
+    "owner": {
+      "name": "Dr. Vikramaditya Sharma",
+      "aadhaarMasked": "XXXX-XXXX-9842",
+      "possessionDate": "2017-09-24",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "KA-BLR-REG-2017-54128"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Boundary Verified",
+      "riskScore": 7,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 22,
+      "lastSatelliteScan": "2026-08-22",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-009",
+    "ulpin": "29104892019404",
+    "region": "Bengaluru Tech Corridor (KA)",
+    "surveyNo": "Sy. No. 105/3",
+    "district": "Bengaluru Urban",
+    "taluk": "Bengaluru East",
+    "village": "Bellandur",
+    "coordinates": [
+      [77.69350, 12.93320],
+      [77.69700, 12.93320],
+      [77.69700, 12.93000],
+      [77.69350, 12.93000],
+      [77.69350, 12.93320]
+    ],
+    "center": [12.93160, 77.69525],
+    "areaSqFt": 38000,
+    "areaAcres": 0.872,
+    "zoning": "Commercial",
+    "zoningCode": "C-3",
+    "circleRatePerSqFt": 11500,
+    "marketValue": 437000000,
+    "propertyTaxAnnual": 437000,
+    "stampDutyRatePct": 6.5,
+    "owner": {
+      "name": "Pooja Ananthakrishnan",
+      "aadhaarMasked": "XXXX-XXXX-7123",
+      "possessionDate": "2022-02-18",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "KA-BLR-REG-2022-19402"
+    },
+    "financial": {
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "ICICI Bank Mortgage Gateway",
+      "loanAmount": 180000000,
+      "lienId": "LIEN-ICICI-2023-441",
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": true,
+      "severity": "MODERATE",
+      "detectedViolation": "Rear Setback Buffer Infringement (1.4m deviation from approved building plan)",
+      "riskScore": 62,
+      "historicalBuildingAreaPct": 10,
+      "currentBuildingAreaPct": 38,
+      "lastSatelliteScan": "2026-08-22",
+      "aiBoundingBox": {
+        "minLat": 12.9305,
+        "maxLat": 12.9318,
+        "minLng": 77.6950,
+        "maxLng": 77.6968
+      }
+    }
+  },
+  {
+    "id": "PARCEL-010",
+    "ulpin": "27084920194801",
+    "region": "Pune Hinjawadi (MH)",
+    "surveyNo": "Sy. No. 88/1",
+    "district": "Pune",
+    "taluk": "Mulshi",
+    "village": "Hinjawadi Phase-1",
+    "coordinates": [
+      [73.72500, 18.59850],
+      [73.72900, 18.59850],
+      [73.72900, 18.59450],
+      [73.72500, 18.59450],
+      [73.72500, 18.59850]
+    ],
+    "center": [18.59650, 73.72700],
+    "areaSqFt": 108900,
+    "areaAcres": 2.500,
+    "zoning": "Industrial Logistics",
+    "zoningCode": "IND-LOGISTICS",
+    "circleRatePerSqFt": 7800,
+    "marketValue": 849420000,
+    "propertyTaxAnnual": 1698840,
+    "stampDutyRatePct": 6.0,
+    "owner": {
+      "name": "Sahyadri Mega Logistics Parks LLP",
+      "aadhaarMasked": "CORP-LLP-AAG-412",
+      "possessionDate": "2019-12-08",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "MH-PUN-REG-2019-77192"
+    },
+    "financial": {
+      "isEncumbered": true,
+      "lienLockActive": true,
+      "bankLien": "Bank of Baroda (Infrastructure Finance)",
+      "loanAmount": 380000000,
+      "lienId": "LIEN-BOB-2021-0021",
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - MIDC Standard Compliance Verified",
+      "riskScore": 9,
+      "historicalBuildingAreaPct": 30,
+      "currentBuildingAreaPct": 55,
+      "lastSatelliteScan": "2026-08-25",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-011",
+    "ulpin": "27084920194802",
+    "region": "Pune Hinjawadi (MH)",
+    "surveyNo": "Sy. No. 88/2",
+    "district": "Pune",
+    "taluk": "Mulshi",
+    "village": "Hinjawadi Phase-1",
+    "coordinates": [
+      [73.72950, 18.59850],
+      [73.73350, 18.59850],
+      [73.73350, 18.59450],
+      [73.72950, 18.59450],
+      [73.72950, 18.59850]
+    ],
+    "center": [18.59650, 73.73150],
+    "areaSqFt": 72000,
+    "areaAcres": 1.653,
+    "zoning": "Residential High-Rise",
+    "zoningCode": "R-4",
+    "circleRatePerSqFt": 6900,
+    "marketValue": 496800000,
+    "propertyTaxAnnual": 496800,
+    "stampDutyRatePct": 6.0,
+    "owner": {
+      "name": "Ajinkya Ramesh Patil",
+      "aadhaarMasked": "XXXX-XXXX-3891",
+      "possessionDate": "2021-05-12",
+      "mutationStatus": "MUTATION_PENDING",
+      "titleType": "Provisional Title (Mutation Review)",
+      "deedNo": "MH-PUN-REG-2021-49021"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Boundary Verified",
+      "riskScore": 5,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 18,
+      "lastSatelliteScan": "2026-08-25",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-012",
+    "ulpin": "27084920194803",
+    "region": "Pune Hinjawadi (MH)",
+    "surveyNo": "Sy. No. 89/1",
+    "district": "Pune",
+    "taluk": "Mulshi",
+    "village": "Hinjawadi Phase-1",
+    "coordinates": [
+      [73.72500, 18.59400],
+      [73.72900, 18.59400],
+      [73.72900, 18.59000],
+      [73.72500, 18.59000],
+      [73.72500, 18.59400]
+    ],
+    "center": [18.59200, 73.72700],
+    "areaSqFt": 54450,
+    "areaAcres": 1.250,
+    "zoning": "Transit Oriented Development",
+    "zoningCode": "TOD-METRO",
+    "circleRatePerSqFt": 9200,
+    "marketValue": 500940000,
+    "propertyTaxAnnual": 500940,
+    "stampDutyRatePct": 6.0,
+    "owner": {
+      "name": "Pune Metro Transit Infrastructure Corp",
+      "aadhaarMasked": "GOVT-MAHA-METRO-01",
+      "possessionDate": "2018-10-30",
+      "mutationStatus": "GOVT_PROTECTED",
+      "titleType": "Sovereign Public Infrastructure",
+      "deedNo": "MH-PUN-GAZETTE-2018-09"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - Metro Corridor Reserved Alignment",
+      "riskScore": 2,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 40,
+      "lastSatelliteScan": "2026-08-25",
+      "aiBoundingBox": null
+    }
+  },
+  {
+    "id": "PARCEL-013",
+    "ulpin": "27084920194804",
+    "region": "Pune Hinjawadi (MH)",
+    "surveyNo": "Sy. No. 89/2",
+    "district": "Pune",
+    "taluk": "Mulshi",
+    "village": "Hinjawadi Phase-1",
+    "coordinates": [
+      [73.72950, 18.59400],
+      [73.73350, 18.59400],
+      [73.73350, 18.59000],
+      [73.72950, 18.59000],
+      [73.72950, 18.59400]
+    ],
+    "center": [18.59200, 73.73150],
+    "areaSqFt": 48000,
+    "areaAcres": 1.102,
+    "zoning": "Agricultural",
+    "zoningCode": "AG-RUR",
+    "circleRatePerSqFt": 3400,
+    "marketValue": 163200000,
+    "propertyTaxAnnual": 32640,
+    "stampDutyRatePct": 4.0,
+    "owner": {
+      "name": "Baban Tukaram Deshmukh",
+      "aadhaarMasked": "XXXX-XXXX-5519",
+      "possessionDate": "2008-07-16",
+      "mutationStatus": "MUTATED_CLEAR",
+      "titleType": "Conclusive Ownership (Bhu-Aadhaar Verified)",
+      "deedNo": "MH-PUN-REG-2008-1184"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
       "courtDispute": false,
       "taxPendingDues": 0
     },
     "aiSurveillance": {
       "encroachmentDetected": true,
       "severity": "HIGH",
-      "detectedViolation": "Unauthorized Construction & Debris Encroachment inside Buffer Zone",
-      "riskScore": 81,
+      "detectedViolation": "Unauthorized Industrial Vehicle Parking & Dumping (350 sq. meters)",
+      "riskScore": 79,
       "historicalBuildingAreaPct": 0,
-      "currentBuildingAreaPct": 14,
-      "lastSatelliteScan": "2026-09-02",
+      "currentBuildingAreaPct": 25,
+      "lastSatelliteScan": "2026-08-25",
       "aiBoundingBox": {
-        "minLat": 12.9792,
-        "maxLat": 12.9802,
-        "minLng": 77.592,
-        "maxLng": 77.5935
+        "minLat": 18.5908,
+        "maxLat": 18.5925,
+        "minLng": 73.7302,
+        "maxLng": 73.7328
       }
+    }
+  },
+  {
+    "id": "PARCEL-014",
+    "ulpin": "29104892019405",
+    "region": "Bengaluru Tech Corridor (KA)",
+    "surveyNo": "Sy. No. 106/1",
+    "district": "Bengaluru Urban",
+    "taluk": "Bengaluru East",
+    "village": "Bellandur",
+    "coordinates": [
+      [77.69750, 12.93720],
+      [77.70100, 12.93720],
+      [77.70100, 12.93400],
+      [77.69750, 12.93400],
+      [77.69750, 12.93720]
+    ],
+    "center": [12.93560, 77.69925],
+    "areaSqFt": 52000,
+    "areaAcres": 1.194,
+    "zoning": "Commercial",
+    "zoningCode": "C-2",
+    "circleRatePerSqFt": 12800,
+    "marketValue": 665600000,
+    "propertyTaxAnnual": 665600,
+    "stampDutyRatePct": 6.5,
+    "owner": {
+      "name": "Manjunath & Sons Enterprises",
+      "aadhaarMasked": "XXXX-XXXX-8820",
+      "possessionDate": "2023-01-11",
+      "mutationStatus": "MUTATION_PENDING",
+      "titleType": "Provisional Title (Commercial Mutation Review)",
+      "deedNo": "KA-BLR-REG-2023-0194"
+    },
+    "financial": {
+      "isEncumbered": false,
+      "lienLockActive": false,
+      "bankLien": "None",
+      "loanAmount": 0,
+      "lienId": null,
+      "courtDispute": false,
+      "taxPendingDues": 0
+    },
+    "aiSurveillance": {
+      "encroachmentDetected": false,
+      "severity": "CLEAR",
+      "detectedViolation": "None - 100% Setback Compliance",
+      "riskScore": 4,
+      "historicalBuildingAreaPct": 0,
+      "currentBuildingAreaPct": 30,
+      "lastSatelliteScan": "2026-08-22",
+      "aiBoundingBox": null
     }
   }
 ]

@@ -24,18 +24,13 @@ import ResearchReferences from './components/ResearchReferences';
 import DigitalTwin3DViewer from './components/DigitalTwin3DViewer';
 import ProblemSolution from './components/ProblemSolution';
 import AgentOrchestrationCockpit from './components/AgentOrchestrationCockpit';
+import BhuMitraCopilot from './components/BhuMitraCopilot';
 
 export default function App() {
   const [activeView, setActiveView] = useState('map');
-  const [userRole, setUserRole] = useState('ADMIN');
+  const [userRole, setUserRole] = useState('CITIZEN');
   const [disabledForUsers, setDisabledForUsers] = useState(['risk', 'dpi', 'feasibility']);
-  const [currentUser, setCurrentUser] = useState({
-    id: 'USER-001',
-    name: 'Ayush Choudhary',
-    email: 'ayush@geoland.gov.in',
-    role: 'ADMIN',
-    organization: 'Ministry of Housing & Land Governance'
-  });
+  const [currentUser, setCurrentUser] = useState(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [inspectingParcel, setInspectingParcel] = useState(null);
@@ -165,12 +160,16 @@ export default function App() {
         action: nextAction
       });
       if (res.data.success) {
-        fetchParcels();
-        fetchDPIStatus();
+        await Promise.all([fetchParcels(), fetchDPIStatus()]);
         setSelectedParcel(res.data.parcel);
+        showToast(
+          `Mortgage lien ${nextAction === 'LOCK' ? 'applied to' : 'released for'} ULPIN ${parcel.ulpin}.`,
+          nextAction === 'LOCK' ? 'warning' : 'success'
+        );
       }
     } catch (err) {
       console.error('Error toggling lien:', err);
+      showToast(err.response?.data?.message || 'Unable to update the mortgage lien.', 'error');
     }
   };
 
@@ -222,7 +221,6 @@ export default function App() {
           activeView={activeView}
           setActiveView={setActiveView}
           userRole={userRole}
-          setUserRole={setUserRole}
           disabledForUsers={disabledForUsers}
         />
 
@@ -247,7 +245,6 @@ export default function App() {
                     onGenerateEC={handleGenerateEC}
                     onToggleLien={(p) => {
                       handleToggleLien(p);
-                      showToast(`Mortgage Lien updated for ULPIN ${p.ulpin}`, 'warning');
                     }}
                     onRunAIScan={handleRunAIScan}
                     droneTelemetry={droneTelemetry}
@@ -376,9 +373,20 @@ export default function App() {
         }}
         onToggleLien={(p) => {
           handleToggleLien(p);
-          showToast(`Lien status updated for ULPIN ${p.ulpin}`, 'warning');
         }}
         onRunAIScan={handleRunAIScan}
+        showToast={showToast}
+      />
+
+      {/* Floating AI Land Governance Copilot */}
+      <BhuMitraCopilot
+        selectedParcel={selectedParcel}
+        parcels={parcels}
+        onSelectParcel={(p) => {
+          setSelectedParcel(p);
+          setInspectingParcel(p);
+        }}
+        setActiveView={setActiveView}
         showToast={showToast}
       />
 

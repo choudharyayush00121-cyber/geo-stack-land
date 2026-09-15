@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Search, ShieldCheck, Cpu, Layers, Activity, Lock, Key, Satellite, Check, Sparkles, User, Shield, Bell, Command, Box } from 'lucide-react';
+import { Search, ShieldCheck, Cpu, Layers, Activity, Lock, Key, Satellite, Check, Sparkles, User, Shield, Bell, Command, Box, Volume2, VolumeX } from 'lucide-react';
 import NotificationCenter from './NotificationCenter';
 import axios from 'axios';
+import { isAudioMuted, toggleAudioMute, playClickSound } from '../utils/audioEffects';
 
 export default function Header({
   onSearch,
@@ -19,6 +20,16 @@ export default function Header({
 }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showNotifications, setShowNotifications] = useState(false);
+
+  const [soundMuted, setSoundMuted] = useState(isAudioMuted());
+
+  const handleToggleSound = () => {
+    const isNowMuted = !toggleAudioMute();
+    setSoundMuted(isNowMuted);
+    if (!isNowMuted) {
+      playClickSound();
+    }
+  };
 
   const unreadCount = notifications.filter((n) => !n.read).length;
 
@@ -108,7 +119,20 @@ export default function Header({
         </div>
 
         {/* User Account, Notifications & Actions */}
-        <div className="flex items-center space-x-3 relative">
+        <div className="flex items-center space-x-2.5 relative">
+          {/* Audio Effects Toggle Button */}
+          <button
+            onClick={handleToggleSound}
+            className={`p-2.5 rounded-xl border transition-all hover:scale-105 active:scale-95 shadow-md ${
+              !soundMuted
+                ? 'bg-slate-800 hover:bg-slate-700 text-cyan-300 border-cyan-500/40 shadow-[0_0_12px_rgba(6,182,212,0.2)]'
+                : 'bg-slate-800 hover:bg-slate-700 text-slate-500 border-slate-700'
+            }`}
+            title={soundMuted ? 'Unmute UI Sound Effects' : 'Mute UI Sound Effects'}
+          >
+            {soundMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+          </button>
+
           {/* Notification Bell Dropdown Button */}
           <div className="relative">
             <button

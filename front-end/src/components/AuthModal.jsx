@@ -8,7 +8,6 @@ import {
   Shield,
   CheckCircle2,
   AlertCircle,
-  Sparkles,
   ArrowRight,
   UserPlus,
   LogIn
@@ -204,35 +203,6 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialTab =
               </div>
             </div>
 
-            {/* Quick Credentials Helper */}
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/80 space-y-1.5 text-[11px] text-slate-400">
-              <p className="font-semibold text-cyan-400 flex items-center gap-1">
-                <Sparkles className="w-3 h-3" /> Sample Quick Login Credentials:
-              </p>
-              <div className="grid grid-cols-2 gap-1 text-[10px] font-mono">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setEmail('ayush@geoland.gov.in');
-                    setPassword('password123');
-                  }}
-                  className="text-left bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-cyan-500/50 hover:text-cyan-300"
-                >
-                  👑 Admin Login
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setEmail('rajesh.official@karnataka.gov.in');
-                    setPassword('password123');
-                  }}
-                  className="text-left bg-slate-900 p-1.5 rounded border border-slate-800 hover:border-amber-500/50 hover:text-amber-300"
-                >
-                  🏛 Officer Login
-                </button>
-              </div>
-            </div>
-
             <button
               type="submit"
               disabled={loading}
@@ -306,7 +276,6 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialTab =
                 >
                   <option value="CITIZEN">Citizen / Property Owner</option>
                   <option value="OFFICIAL">Government Officer</option>
-                  <option value="ADMIN">System Administrator</option>
                 </select>
               </div>
 

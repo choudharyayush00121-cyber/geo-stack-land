@@ -54,7 +54,7 @@ export default function DigitalTwin3DViewer({ parcels = [], selectedParcel, onSe
     return () => clearInterval(interval);
   }, [autoRotate]);
 
-  const p = activeParcelState || {
+  const fallbackParcel = {
     ulpin: '14829304812901',
     plotNo: 'PLOT-742',
     surveyNumber: 'SY-104/2B',
@@ -63,6 +63,26 @@ export default function DigitalTwin3DViewer({ parcels = [], selectedParcel, onSe
     zoning: 'Mixed Residential / Commercial (R-2)',
     financial: { isEncumbered: false, bankName: 'SBI - DPI Locked' },
     disputes: []
+  };
+
+  // The API stores area in sq.ft. and uses surveyNo/id, while the visualizer
+  // consumes metric area and display-specific names. Normalize the boundary
+  // once so live parcel data cannot produce NaN values during rendering.
+  const sourceParcel = activeParcelState || fallbackParcel;
+  const sourceAreaSqMeters = Number(sourceParcel.areaSqMeters);
+  const sourceAreaSqFt = Number(sourceParcel.areaSqFt);
+  const areaSqMeters = Number.isFinite(sourceAreaSqMeters)
+    ? sourceAreaSqMeters
+    : Number.isFinite(sourceAreaSqFt)
+    ? sourceAreaSqFt / 10.7639
+    : 0;
+  const areaAcres = Number(sourceParcel.areaAcres);
+  const p = {
+    ...sourceParcel,
+    plotNo: sourceParcel.plotNo || sourceParcel.id || 'UNASSIGNED PLOT',
+    surveyNumber: sourceParcel.surveyNumber || sourceParcel.surveyNo || 'UNASSIGNED SURVEY',
+    areaSqMeters,
+    areaAcres: Number.isFinite(areaAcres) ? areaAcres : areaSqMeters / 4046.86
   };
 
   const getThemeColors = () => {

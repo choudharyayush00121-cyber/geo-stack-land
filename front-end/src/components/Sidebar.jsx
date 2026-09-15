@@ -149,7 +149,7 @@ export const navigationGroups = [
   }
 ];
 
-export default function Sidebar({ activeView, setActiveView, userRole, setUserRole, disabledForUsers = [] }) {
+export default function Sidebar({ activeView, setActiveView, userRole, disabledForUsers = [] }) {
   const [collapsed, setCollapsed] = useState(false);
 
   // Filter options based on disabledForUsers unless it's an ADMIN
@@ -222,8 +222,9 @@ export default function Sidebar({ activeView, setActiveView, userRole, setUserRo
             </div>
             <select
               value={userRole}
-              onChange={(e) => setUserRole(e.target.value)}
-              className="w-full bg-slate-800 text-white text-xs font-semibold p-2 rounded-lg border border-slate-700 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+              disabled
+              aria-label="Authenticated access role"
+              className="w-full bg-slate-800 text-white text-xs font-semibold p-2 rounded-lg border border-slate-700 cursor-not-allowed opacity-80"
             >
               <option value="CITIZEN">👤 Citizen (Public Search & ECs)</option>
               <option value="OFFICIAL">🏛️ Government Official (OCR & Mutation)</option>

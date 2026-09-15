@@ -97,12 +97,19 @@ router.post('/auth/register', (req, res) => {
     });
   }
 
+  if (role === 'ADMIN') {
+    return res.status(403).json({
+      success: false,
+      message: 'Administrator accounts must be provisioned by an existing administrator.'
+    });
+  }
+
   const newUser = {
     id: `USER-${Date.now().toString().substring(6)}`,
     name: name.trim(),
     email: normalizedEmail,
     password: password, // In production, hash with bcrypt
-    role: role || 'CITIZEN',
+    role: role === 'OFFICIAL' ? 'OFFICIAL' : 'CITIZEN',
     mobile: mobile || '',
     organization: organization || 'Registered User',
     district: district || 'Bengaluru Urban',
@@ -477,6 +484,13 @@ router.post('/parcels/toggle-lien', (req, res) => {
   const parcels = getParcelsData();
   const { ulpin, bankName, loanAmount, action } = req.body;
 
+  if (!['LOCK', 'UNLOCK'].includes(action)) {
+    return res.status(400).json({
+      success: false,
+      message: "Action must be either 'LOCK' or 'UNLOCK'."
+    });
+  }
+
   const index = parcels.findIndex((p) => p.ulpin === ulpin || p.id === ulpin);
   if (index === -1) {
     return res.status(404).json({ success: false, message: 'Parcel not found' });
@@ -485,10 +499,18 @@ router.post('/parcels/toggle-lien', (req, res) => {
   const parcel = parcels[index];
 
   if (action === 'LOCK') {
+    const parsedLoanAmount = Number(loanAmount);
+    if (loanAmount !== undefined && (!Number.isFinite(parsedLoanAmount) || parsedLoanAmount <= 0)) {
+      return res.status(400).json({
+        success: false,
+        message: 'A lien lock requires a positive loan amount.'
+      });
+    }
+
     parcel.financial.isEncumbered = true;
     parcel.financial.lienLockActive = true;
     parcel.financial.bankLien = bankName || 'Partner Bank (DPI Automated Lock)';
-    parcel.financial.loanAmount = Number(loanAmount) || 5000000;
+    parcel.financial.loanAmount = loanAmount === undefined ? 5000000 : parsedLoanAmount;
     parcel.financial.lienId = `LIEN-DPI-${Date.now().toString().substring(6)}`;
   } else if (action === 'UNLOCK') {
     parcel.financial.isEncumbered = false;
@@ -640,6 +662,76 @@ router.get('/dpi/gateway-status', (req, res) => {
         postgisSpatialServer: { status: 'ONLINE', latencyMs: 9, lastSync: new Date().toISOString() }
       }
     }
+  });
+});
+
+// POST /api/dpi/simulate-fraud - Core SIH Demonstration Endpoint
+router.post('/dpi/simulate-fraud', (req, res) => {
+  const { ulpin, attemptType = 'ILLEGAL_SALE_REGISTRATION' } = req.body;
+  const parcels = getParcelsData();
+  const parcel = parcels.find((p) => p.ulpin === ulpin) || parcels[0];
+
+  const hasLien = parcel.financial.isEncumbered || parcel.financial.lienLockActive;
+  const isProtected = parcel.zoningCode?.includes('PROT') || parcel.zoningCode?.includes('ENV');
+
+  if (hasLien) {
+    const fraudRecord = {
+      incidentId: `DPI-ALERT-${Date.now().toString().substring(6)}`,
+      timestamp: new Date().toISOString(),
+      ulpin: parcel.ulpin,
+      surveyNo: parcel.surveyNo,
+      owner: parcel.owner.name,
+      outcome: 'FRAUD_PREVENTED',
+      preventedAt: 'Sub-Registrar Office Gateway (Stamper Interceptor)',
+      blockReason: `Active Mortgage Lien Lock placed by ${parcel.financial.bankLien}`,
+      loanAmountEncumbered: parcel.financial.loanAmount,
+      lienId: parcel.financial.lienId,
+      legalStatute: 'Section 17 & 48, Registration Act 1908 + DPI Multi-Agency Protocol v2.6',
+      auditSignature: `SHA256-${Buffer.from(parcel.ulpin + Date.now()).toString('hex').substring(0, 32).toUpperCase()}`,
+      alertBroadcast: 'Broadcasted to Sub-Registrar, Banking Gateway & Land Revenue Dept'
+    };
+
+    broadcastSSE('FRAUD_PREVENTED_EVENT', fraudRecord);
+
+    return res.json({
+      success: true,
+      allowed: false,
+      fraudPrevented: true,
+      data: fraudRecord
+    });
+  }
+
+  if (isProtected) {
+    const fraudRecord = {
+      incidentId: `DPI-ALERT-${Date.now().toString().substring(6)}`,
+      timestamp: new Date().toISOString(),
+      ulpin: parcel.ulpin,
+      surveyNo: parcel.surveyNo,
+      owner: parcel.owner.name,
+      outcome: 'GOVT_PROTECTED_BLOCK',
+      preventedAt: 'Sub-Registrar Office Gateway',
+      blockReason: `Land is classified as Sovereign / Eco-Sensitive Protected Zone (${parcel.zoning})`,
+      legalStatute: 'Public Trust Doctrine & Forest Conservation Act',
+      auditSignature: `SHA256-${Buffer.from(parcel.ulpin + Date.now()).toString('hex').substring(0, 32).toUpperCase()}`,
+      alertBroadcast: 'Alert sent to District Collector & Revenue Inspector'
+    };
+
+    broadcastSSE('FRAUD_PREVENTED_EVENT', fraudRecord);
+
+    return res.json({
+      success: true,
+      allowed: false,
+      fraudPrevented: true,
+      data: fraudRecord
+    });
+  }
+
+  return res.json({
+    success: true,
+    allowed: true,
+    fraudPrevented: false,
+    message: 'Title is unencumbered and clear. Registration approved under DPI Conclusive Title Protocol.',
+    clearanceToken: `CLEAR-${Date.now().toString(36).toUpperCase()}`
   });
 });
 
